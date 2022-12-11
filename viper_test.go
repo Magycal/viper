@@ -1518,14 +1518,14 @@ func TestSub(t *testing.T) {
 
 	subv = v.Sub("missing.key")
 	assert.Equal(t, (*Viper)(nil), subv)
-	
+
 	subv = v.Sub("clothing")
 	assert.Equal(t, subv.parents[0], "clothing")
 
 	subv = v.Sub("clothing").Sub("pants")
 	assert.Equal(t, len(subv.parents), 2)
 	assert.Equal(t, subv.parents[0], "clothing")
-	assert.Equal(t, subv.parents[1], "pants")	
+	assert.Equal(t, subv.parents[1], "pants")
 }
 
 var hclWriteExpected = []byte(`"foos" = {
