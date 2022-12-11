@@ -1,6 +1,6 @@
-module github.com/spf13/viper
+module github.com/magycal/viper
 
-go 1.17
+go 1.18
 
 require (
 	github.com/fsnotify/fsnotify v1.6.0
